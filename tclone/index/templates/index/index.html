@@ -1,1 +1,17 @@
-Hello World
+<h1>Tclone</h1>
+    {% for i, t in tweets %}
+       <ul>
+           <li>
+               {{t}}　<a href="{% url 'delete' tweet_id=i %}">削除</a>
+           </li>
+       </ul>
+    {% endfor %}
+
+<h1>Tclone</h1>
+    {% for i, t in tweets %}
+    <ul>
+        <li>
+            {{t}}　<a href="{% url 'update' tweet_id=i %}">編集</a>　<a href="{% url 'delete' tweet_id=i %}">削除</a>
+        </li>
+    </ul>
+    {% endfor %}
